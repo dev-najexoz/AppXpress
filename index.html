@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppXpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css"> <!-- Link to your custom CSS -->
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center flex-wrap">
+        <div class="flex items-center mb-2 sm:mb-0">
+            <img src="src/images/logo.png" alt="AppXpress Logo" class="mr-2">
+            <h1 class="text-2xl font-bold">AppXpress</h1>
+        </div>
+        <div class="flex items-center space-x-4 w-full sm:w-auto justify-between sm:justify-end">
+            <input type="text" id="search-bar" class="p-2 rounded w-full sm:w-64 text-gray-900 bg-white dark:bg-gray-800 dark:text-white border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search apps..." oninput="searchApps()">
+            <button id="dark-mode-toggle" class="bg-gray-800 text-white p-2 rounded mt-2 sm:mt-0">🌙</button>
+        </div>
+    </header>
+
+    <!-- App List -->
+    <div id="app-list" class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- App Cards will be rendered here -->
+    </div>
+
+    <!-- No Results Message -->
+    <p id="no-results-message" class="hidden text-center text-gray-500">No apps found</p>
+
+    <!-- App Details Modal -->
+    <div id="app-detail-modal" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg w-1/3">
+            <button class="modal-close-btn" onclick="closeModal()">X</button>
+            <div id="app-detail-content">
+                <!-- App details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JS file at the end of the body -->
+    <script src="src/script/app.js"></script>
+
+</body>
+</html>

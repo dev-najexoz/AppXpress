@@ -1,0 +1,51 @@
+/* Custom styles for your project */
+
+input[type="text"] {
+    color: #333; /* Dark text for light mode */
+  }
+  
+  input[type="text"].dark {
+    color: white; /* White text for dark mode */
+    background-color: #2d3748; /* Dark background for dark mode */
+  }
+  
+  input[type="text"]::placeholder {
+    color: #6b7280; /* Light gray for placeholder text */
+  }
+  
+  /* Dark Mode adjustments */
+  .dark-mode {
+    background-color: #1a202c;
+    color: white;
+  }
+  .dark-mode h2{
+    color: #1a202c;
+  }
+  .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .loading-spinner {
+    border-top: 2px solid #4B5563;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #app-detail-content p{
+    color: #1a202c;
+  }  
